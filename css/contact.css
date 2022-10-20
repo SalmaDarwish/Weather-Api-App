@@ -1,0 +1,163 @@
+:root{
+    --primary-color: #68015a;
+    --secondary-color: #a70190;
+}
+
+body{
+    /* background-color: #fcbcf3; */
+    background-image: url(../images/naruto-background.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 700;
+    margin: 0 0 20px;
+    line-height: normal;
+}
+header{
+    padding: 20px 0;
+}
+
+.logo-img{
+    display: inline-block;
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+    color: rgb(231, 228, 227) !important;
+}
+.logo-data{
+    display: inline-block;
+    vertical-align: middle;
+}
+.logo-data h1{
+    margin-bottom: 5px;
+    font-size: 1.1428571429em;
+    color: white;
+}
+.logo-desc{
+    font-size: 0.7142857143em;
+    display: block;
+    color: white;
+}
+.navbar-toggler {
+    background-color: white !important;
+}
+.nav-item{
+    margin-left: 10px !important;
+}
+.nav-link{
+    padding:5px 25px !important;
+}
+.nav-link:hover{
+    color: var(--primary-color) !important;
+    border: 2px solid  var(--primary-color);
+    border-radius: 30px;
+    font-weight: 400;
+}
+.nav-link.active{
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    font-weight: 400;
+    color: var(--primary-color) !important;
+}
+.navigation-box{
+    font-size: 0.928571em;
+    background: var(--secondary-color);
+    border-radius: 40px;
+    padding: 20px 30px;
+}
+a{
+    font-size: 14px;
+}
+.home:hover{
+    text-decoration: underline;
+}
+.contact-data{
+    background: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.address-icon{
+    vertical-align: middle;
+}
+.fa-location-dot{
+    color: #44023b;
+    margin-top: -10px !important;
+    top: 30%;
+    right: 92%;
+}
+ul{
+    list-style-type: none;
+}
+.address{
+    font-size: 14px;
+    width: 36%;
+}
+.fa-solid{
+    color: #44023b;
+}
+h2, .contact-p{
+   color: rgb(233, 227, 227) !important
+}
+input{
+    width: 98% !important;
+}
+::placeholder{
+    color: rgb(177, 176, 176) !important;
+}
+.form-control{
+    background-color: white;
+}
+.submit{
+    border: none;
+    background: var(--secondary-color);
+    padding: 10px 20px;
+    color: white;
+}
+footer{
+    padding: 30px 0;
+}
+.sub-input{
+    padding: 20px 100px 20px 20px;
+    background: var(--secondary-color);
+    width: 100%;
+    color: white;
+    outline: none;
+    border: none !important;
+    border-radius: 30px;
+
+}
+.social-link{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    color: var(--primary-color) !important;
+    text-align: center;
+    line-height: 2;
+    transition: 0.3s ease;
+    font-size: 20px;
+    font-size: 1.4285714286em;
+}
+.social-link:hover{
+    background-color: white;
+    color: var(--secondary-color) !important;
+}
+[type=button]{
+    font-size: 14px;
+}
+.footer-form{
+    margin-bottom: 30px;
+}
+.sub-btn{
+    right: 20px;
+    top: 5px;
+    bottom: 5px;
+    border: none;
+    background: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+}
