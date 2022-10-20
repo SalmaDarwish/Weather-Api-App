@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather</title>
+    <!--  CSS   -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="awesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--   CSS  -->
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="HTML, CSS, javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- Meta Tags -->
+</head>
+
+<body>
+
+    <section>
+        <header>
+            <div class="container d-flex justify-content-between">
+                <a href="index.html" class="logo">
+                    <img src="images/logo (1).png" class="logo-img me-3" />
+                    <div class="logo-data">
+                        <h1>Weather</h1>
+                        <p class="logo-desc">tagline goes here</p>
+                    </div>
+                </a>
+                <nav class="navbar navbar-expand-lg bg-transparent">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-light-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">News</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Live cameras</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Photos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="bg input-form mb-4">
+            <div class="container">
+                <form class="location position-relative">
+                    <input type="text" placeholder="Find Your Location..." id="locationSearch" name="country" />
+                    <input type="button" class="position-absolute" value="Find" id="findBtn" />
+                </form>
+            </div>
+        </div>
+        <main>
+            <div class="weather-content">
+                <div class="container">
+                    <div class="row d-flex">
+                        <div class="col-lg-4 col-md-12   px-0 mb-4">
+                            <div class="today w-box" id="today">
+                                <div class="w-box-header d-flex justify-content-between ">
+                                    <div id="todayDay" class="fw-bolder"></div>
+                                    <div id="todayDate" class="fw-bolder"></div>
+                                </div>
+                                <div class="weather-content">
+                                    <div class="location " id="location"></div>
+                                    <div class="degree">
+                                        <div class="num" id="degree">
+                                            <span id="num"></span><span><sup>o</sup>C</span>
+                                        </div>
+                                        <div class="weather-icon d-inline-block">
+                                            <img src="" id="wIcon" width="80" class="d-inline-block">
+                                        </div>
+                                    </div>
+                                    <div class="weather-status" id="status">
+                                    </div>
+                                    <span class="me-5"><img src="images/icon-umberella.png"
+                                            class=" me-2 d-inline-block">
+                                        <p id="rainPer" class="d-inline-block"></p>
+                                    </span>
+                                    <span class="me-3"><img src="images/icon-wind.png" class="d-inline-block me-2">
+                                        <p id="windSpeed" class="d-inline-block"></p>
+                                    </span>
+                                    <span> <img src="images/icon-compass.png" class="d-inline-block me-2">
+                                        <p id="windDir" class="d-inline-block"></p>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-4 col-md-12   px-0 mb-4">
+                            <div class="tomorrow w-box h-100" id="tomorrow">
+                                <div class="w-box-header  text-center">
+                                    <div id="tomorrowDay"></div>
+                                </div>
+                                <div class=" weather-content text-center">
+                                    <div class="weather-icon">
+                                        <img src="" id="tomorrowIcon" width="48">
+                                    </div>
+                                    <div class="tomorrow-degrees mb-5" id="tomorrow-degrees">
+                                        <p class="max"><span id="max"></span><span><sup>o</sup>C</span></p>
+
+                                        <p class="min"><span id="min"></span><span><sup>o</sup>C</span></p>
+                                    </div>
+                                    <div class="weather-status" id="tomorrowStatus">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4 col-md-12  px-0 mb-4" >
+                            <div class="next w-box h-100" id="next" >
+                              <div class="w-box-header  text-center">
+                                <div id="nextDay"></div>
+                            </div>
+                            <div class=" weather-content text-center">
+                                <div class="weather-icon">
+                                    <img src="" id="nextIcon" width="48">
+                                </div>
+                                <div class="next-degrees" id="next-degrees">
+                                    <p class="max"><span id="next-max"></span><span><sup>o</sup>C</span></p>
+
+                                    <p class="min"><span id="next-min"></span><span><sup>o</sup>C</span></p>
+                                </div>
+                                <div class="weather-status" id="nextStatus">
+                                </div>
+
+                            </div>   
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-8">
+                        <form class="footer-form position-relative">
+                            <input type="text" placeholder="Enter your email to subscribe..." class="sub-input">
+                            <input type="submit" value="Subscribe" class="sub-btn position-absolute">
+
+                        </form>
+                    </div>
+                    <div class="col-md-3 mt-3">
+                        <div class="social-data d-flex mb-3">
+                            <a href="#" class="social-link me-1">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link me-1">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link me-1">
+                                <i class="fa-brands fa-google-plus"></i>
+                            </a>
+                            <a href="#" class="social-link me-1">
+                                <i class="fa-brands fa-pinterest"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <p>Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            </div>
+        </footer>
+    </section>
+
+    <script src="javascript/index.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
